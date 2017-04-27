@@ -8,7 +8,7 @@ distributions:
 #      released-packages-without-doc-job: indigo/doc-released-build.yaml
     notification_emails:
     - lcas-build-farm@googlegroups.com
-    release_builds:
+#    release_builds:
 #      arm: indigo/release-armhf-build.yaml
 #      default: indigo/release-build.yaml
     source_builds:
