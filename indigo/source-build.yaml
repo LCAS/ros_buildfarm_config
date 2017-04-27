@@ -43,7 +43,7 @@ repositories:
     =nFcN
     -----END PGP PUBLIC KEY BLOCK----- 
   urls:
-  - http://10.210.9.155/ubuntu/testing
+  - http://10.210.9.154/ubuntu/testing
 targets:
   ubuntu:
     trusty:
