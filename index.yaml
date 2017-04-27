@@ -10,7 +10,7 @@ distributions:
     - lcas-build-farm@googlegroups.com
     release_builds:
 #      arm: indigo/release-armhf-build.yaml
-      default: indigo/release-build.yaml
+#      default: indigo/release-build.yaml
     source_builds:
       default: indigo/source-build.yaml
 #  jade:
