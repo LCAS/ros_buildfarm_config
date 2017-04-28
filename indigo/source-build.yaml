@@ -85,7 +85,7 @@ test_commits:
 # do not run pr builds on the test farm (otherwise we'll get multiple reports)
 test_pull_requests:
   default: true
-  force: false
+  force: true
 type: source-build
 version: 2
 tag_whitelist: [lcas]
