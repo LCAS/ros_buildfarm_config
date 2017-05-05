@@ -18,7 +18,7 @@ distributions:
 #      default: jade/doc-build.yaml
 #      released-packages-without-doc-job: jade/doc-released-build.yaml
 #    notification_emails:
-#    - ros-buildfarm-testfarm@googlegroups.com
+#    - lcas-build-farm@googlegroups.com
 #    release_builds:
 #      arm: jade/release-armhf-build.yaml
 #      default: jade/release-build.yaml
