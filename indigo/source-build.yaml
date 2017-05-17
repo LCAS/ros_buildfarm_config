@@ -88,4 +88,4 @@ test_pull_requests:
   force: true
 type: source-build
 version: 2
-tag_whitelist: [lcas,strands]
+tag_whitelist: [lcas,strands,iliad]
