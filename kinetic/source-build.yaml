@@ -8,7 +8,7 @@ notifications:
   committers: false
   emails:
   - lcas-build-farm@googlegroups.com
-  maintainers: false
+  maintainers: true
 repositories:
   keys:
   - |
