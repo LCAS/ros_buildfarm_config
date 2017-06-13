@@ -77,6 +77,10 @@ repositories:
   - http://10.210.9.154/ubuntu/testing
   - http://packages.ros.org/ros/ubuntu
 targets:
+  _config:
+    custom_rosdep_urls:
+    - https://raw.githubusercontent.com/LCAS/rosdistro/master/rosdep/sources.list.d/20-default.list
+    - https://raw.githubusercontent.com/LCAS/rosdistro/master/rosdep/sources.list.d/50-lcas.list
   ubuntu:
     xenial:
       amd64:
