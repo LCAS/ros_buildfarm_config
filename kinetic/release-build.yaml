@@ -9,7 +9,7 @@ jenkins_source_job_timeout: 30
 notifications:
   emails:
   - lcas-build-farm@googlegroups.com
-  maintainers: false
+  maintainers: true
 sync:
   package_count: 1
 repositories:
