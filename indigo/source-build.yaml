@@ -85,11 +85,11 @@ targets:
     trusty:
       amd64:
 test_commits:
-  default: true
+  default: false
 # do not run pr builds on the test farm (otherwise we'll get multiple reports)
 test_pull_requests:
   default: false
-  force: true
+  force: false
 type: source-build
 version: 2
-tag_whitelist: [disabled]
+tag_whitelist: [lcas,strands,iliad]
