@@ -2,17 +2,17 @@
 # ROS buildfarm index file
 ---
 distributions:
-  indigo:
+#  indigo:
 #    doc_builds:
 #      default: indigo/doc-build.yaml
 #      released-packages-without-doc-job: indigo/doc-released-build.yaml
-    notification_emails:
-    - lcas-build-farm@googlegroups.com
-    release_builds:
+#    notification_emails:
+#    - lcas-build-farm@googlegroups.com
+#    release_builds:
 #      arm: indigo/release-armhf-build.yaml
-      default: indigo/release-build.yaml
-    source_builds:
-      default: indigo/source-build.yaml
+#      default: indigo/release-build.yaml
+#    source_builds:
+#      default: indigo/source-build.yaml
 #  jade:
 #    doc_builds:
 #      default: jade/doc-build.yaml
@@ -35,6 +35,42 @@ distributions:
       default: kinetic/release-build.yaml
     source_builds:
       default: kinetic/source-build.yaml
+#  lunar:
+#    doc_builds:
+#      default: lunar/doc-build.yaml
+#      released-packages-without-doc-job: lunar/doc-released-build.yaml
+#    notification_emails:
+#    - ros-buildfarm-lunar@googlegroups.com
+#    - clalancette+buildfarm@osrfoundation.org
+#    release_builds:
+#      default: lunar/release-build.yaml
+#      ds: lunar/release-stretch-build.yaml
+#      dsv8: lunar/release-stretch-arm64-build.yaml
+#      uxhf: lunar/release-xenial-armhf-build.yaml
+#      uxv8: lunar/release-xenial-arm64-build.yaml
+#    source_builds:
+#      default: lunar/source-build.yaml
+  melodic:
+#    doc_builds:
+#      default: melodic/doc-build.yaml
+#      released-packages-without-doc-job: melodic/doc-released-build.yaml
+    notification_emails:
+    - lcas-build-farm@googlegroups.com
+    release_builds:
+      default: melodic/release-build.yaml
+#      ds: melodic/release-stretch-build.yaml
+#      dsv8: melodic/release-stretch-arm64-build.yaml
+#      ubhf: melodic/release-armhf-build.yaml
+#      ubv8: melodic/release-arm64-build.yaml
+    source_builds:
+      default: melodic/source-build.yaml
+#      ds: melodic/source-stretch-build.yaml
+#  noetic:
+#    ci_builds:
+#      bionic-python2: noetic/ci-bionic-python2.yaml
+#      bionic-python3: noetic/ci-bionic-python3.yaml
+#    notification_emails:
+#    - lcas-build-farm@googlegroups.com
 #doc_builds:
 #  independent-packages: doc-independent-build.yaml
 jenkins_url: http://10.210.9.151:8080/buildfarm/

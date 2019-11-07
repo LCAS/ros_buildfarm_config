@@ -10,51 +10,80 @@ jenkins_job_timeout: 120
 notifications:
   committers: false
   emails:
-  - ros-buildfarm-melodic@googlegroups.com
-  - clalancette+buildfarm@osrfoundation.org
-  maintainers: true
+  - lcas-build-farm@googlegroups.com
+  maintainers: false
 repositories:
   keys:
   - |
     -----BEGIN PGP PUBLIC KEY BLOCK-----
-    Version: GnuPG v1
+    Version: GnuPG v1.4.11 (GNU/Linux)
 
-    mQINBFzvJpYBEADY8l1YvO7iYW5gUESyzsTGnMvVUmlV3XarBaJz9bGRmgPXh7jc
-    VFrQhE0L/HV7LOfoLI9H2GWYyHBqN5ERBlcA8XxG3ZvX7t9nAZPQT2Xxe3GT3tro
-    u5oCR+SyHN9xPnUwDuqUSvJ2eqMYb9B/Hph3OmtjG30jSNq9kOF5bBTk1hOTGPH4
-    K/AY0jzT6OpHfXU6ytlFsI47ZKsnTUhipGsKucQ1CXlyirndZ3V3k70YaooZ55rG
-    aIoAWlx2H0J7sAHmqS29N9jV9mo135d+d+TdLBXI0PXtiHzE9IPaX+ctdSUrPnp+
-    TwR99lxglpIG6hLuvOMAaxiqFBB/Jf3XJ8OBakfS6nHrWH2WqQxRbiITl0irkQoz
-    pwNEF2Bv0+Jvs1UFEdVGz5a8xexQHst/RmKrtHLct3iOCvBNqoAQRbvWvBhPjO/p
-    V5cYeUljZ5wpHyFkaEViClaVWqa6PIsyLqmyjsruPCWlURLsQoQxABcL8bwxX7UT
-    hM6CtH6tGlYZ85RIzRifIm2oudzV5l+8oRgFr9yVcwyOFT6JCioqkwldW52P1pk/
-    /SnuexC6LYqqDuHUs5NnokzzpfS6QaWfTY5P5tz4KHJfsjDIktly3mKVfY0fSPVV
-    okdGpcUzvz2hq1fqjxB6MlB/1vtk0bImfcsoxBmF7H+4E9ZN1sX/tSb0KQARAQAB
-    tCZPcGVuIFJvYm90aWNzIDxpbmZvQG9zcmZvdW5kYXRpb24ub3JnPokCVAQTAQoA
-    PhYhBMHPbjHmut6IaLFytPQu1vurF8ZUBQJc7yaWAhsDBQkDwmcABQsJCAcCBhUK
-    CQgLAgQWAgMBAh4BAheAAAoJEPQu1vurF8ZUkhIP/RbZY1ErvCEUy8iLJm9aSpLQ
-    nDZl5xILOxyZlzpg+Ml5bb0EkQDr92foCgcvLeANKARNCaGLyNIWkuyDovPV0xZJ
-    rEy0kgBrDNb3++NmdI/+GA92pkedMXXioQvqdsxUagXAIB/sNGByJEhs37F05AnF
-    vZbjUhceq3xTlvAMcrBWrgB4NwBivZY6IgLvl/CRQpVYwANShIQdbvHvZSxRonWh
-    NXr6v/Wcf8rsp7g2VqJ2N2AcWT84aa9BLQ3Oe/SgrNx4QEhA1y7rc3oaqPVu5ZXO
-    K+4O14JrpbEZ3Xs9YEjrcOuEDEpYktA8qqUDTdFyZrxb9S6BquUKrA6jZgT913kj
-    J4e7YAZobC4rH0w4u0PrqDgYOkXA9Mo7L601/7ZaDJob80UcK+Z12ZSw73IgBix6
-    DiJVfXuWkk5PM2zsFn6UOQXUNlZlDAOj5NC01V0fJ8P0v6GO9YOSSQx0j5UtkUbR
-    fp/4W7uCPFvwAatWEHJhlM3sQNiMNStJFegr56xQu1a/cbJH7GdbseMhG/f0BaKQ
-    qXCI3ffB5y5AOLc9Hw7PYiTFQsuY1ePRhE+J9mejgWRZxkjAH/FlAubqXkDgterC
-    h+sLkzGf+my2IbsMCuc+3aeNMJ5Ej/vlXefCH/MpPWAHCqpQhe2DET/jRSaM53US
-    AHNx8kw4MPUkxExgI7Sd
+    mQENBFPzE4sBCAC9c8hzt+gqe6YqXAW9Yd10jx68M0q8IowAe182yVtIvYf5l+qn
+    MsXiDUz4l7c1TcRpdzZ1WwEQoNNjQKq51ip2Ln3Uhri/GsPBk+psIJPt5AeXYrSf
+    xcDs8k4FMWgJtYMlZLuNk1YPaS6Vf1+Ygbe0u+ssORWg3cWhgLWPDydXdlhinUgw
+    kPd9ZYi8aaAxi94DMuOnAjItfPbuX52NHmPR2cXuh3fZklhA6cCGRYkSVqijKhEv
+    /o8fTnjcTama8ml5jnaAhcZ/4UV3terLeXEQn3+WM+VbTsEr58zca5fOv8MjC+Uh
+    EBgDgnHb8/n7OgSUvv9efQgYXBRQ1mD//JaZABEBAAG0LE1hcmMgSGFuaGVpZGUg
+    KFJPU0J1aWxkKSA8bWFyY0BoYW5oZWlkZS5uZXQ+iQE4BBMBAgAiBQJT8xOLAhsD
+    BgsJCAcDAgYVCAIJCgsEFgIDAQIeAQIXgAAKCRDc10MYrtOYVB9cCACQwB9auPEX
+    yQdVwliJMLwVihKz0AU0UCG6qra2pdXx9l5kgkQCuDV5FQqMpk/MIJPn8Zj0l1MI
+    7Yn/EAqBhXjtO2BcTuUC/9epzt1p3C++vK7RSsBDXfKzZN22apIUT0njOkL9Vuoy
+    JjFetmLDaZVbmFU+4ZaX3CFtBL3ewlFiT7G6StKj40JI8QJOlDOziX2OUsqZaI2T
+    Yh681980od3f2OfV3LPVroz7xnyECDfBaPBPaDdb8XWSNVLhuyglb15eewK0hj++
+    Cut3swWH02Y3yVhzFBnosqqjyzPLBQeDMOoHAPpJHRgprfIRDoUkWAXO5re3GIUQ
+    cvk0d1I1jh3luQENBFPzE4sBCACmSxiM1vpPI7BpgUNAhu0B8SWptULpiYOnDHfM
+    hU1u95Z5Lu/hy3sfm4BEKgLju7Y1I3jToWTwJJzgWZRr+iuuwj3fbfHCISYIK7f3
+    IWGL2iM2+kLIH6E9oqRgGbJmhiwbz6OokxG0W7atdqpBxOKqhaH0AH3qRicwnuPm
+    Z4/mNHYQ0vBffENewujn1bCAz4C1WB66/AXBYF8dpCP42qB5yK7FRNv4JubMmqhK
+    7fkD88uu7JVGRYU+temWuJHH4WDxiCmvK8nXacFaZT1NGdTL9/2EukKLguTtZumb
+    oRWgFqV6WFcEnh/V/Ma51D2+K9QbCWa8Bb6c/wKOd9Ii1aDZABEBAAGJAR8EGAEC
+    AAkFAlPzE4sCGwwACgkQ3NdDGK7TmFT2rwf+MzLFPn4Rkko38nctysbXm6qmk34U
+    NTtqirOlxg3mWeUCp7VQGU2Rg2msdo764SxCK12OhJqlXGMd2efCoQhYbMOqG6C0
+    ikBZPkd5BVFuTKsAUiuVoiQd8bDaZSpO2QdE0RdHE/yYfO66pceEKkGlcjkTRFFU
+    M7nTm7IQj4BBZclMLPr4fX520ZOVUepxAARMHW5A6EcHXvhXmblZOJM36fOv3T5N
+    l9L5tWdt/wybaRE4xuwVSs0n7MyMlWmkQxz8Z6OQscbKmuI4tcYSbvvB5tzjLBwZ
+    Chb0eEZA5ePvnGofu+3JH48FmCIPveD+4kI9GhtGkCL3Q2PiPiLcSnWQWQ==
+    =nFcN
+    -----END PGP PUBLIC KEY BLOCK----- 
+  - |
+    -----BEGIN PGP PUBLIC KEY BLOCK-----
+    Version: SKS 1.1.6
+    Comment: Hostname: keyserver.ubuntu.com
+    
+    mQINBFzvJpYBEADY8l1YvO7iYW5gUESyzsTGnMvVUmlV3XarBaJz9bGRmgPXh7jcVFrQhE0L
+    /HV7LOfoLI9H2GWYyHBqN5ERBlcA8XxG3ZvX7t9nAZPQT2Xxe3GT3trou5oCR+SyHN9xPnUw
+    DuqUSvJ2eqMYb9B/Hph3OmtjG30jSNq9kOF5bBTk1hOTGPH4K/AY0jzT6OpHfXU6ytlFsI47
+    ZKsnTUhipGsKucQ1CXlyirndZ3V3k70YaooZ55rGaIoAWlx2H0J7sAHmqS29N9jV9mo135d+
+    d+TdLBXI0PXtiHzE9IPaX+ctdSUrPnp+TwR99lxglpIG6hLuvOMAaxiqFBB/Jf3XJ8OBakfS
+    6nHrWH2WqQxRbiITl0irkQozpwNEF2Bv0+Jvs1UFEdVGz5a8xexQHst/RmKrtHLct3iOCvBN
+    qoAQRbvWvBhPjO/pV5cYeUljZ5wpHyFkaEViClaVWqa6PIsyLqmyjsruPCWlURLsQoQxABcL
+    8bwxX7UThM6CtH6tGlYZ85RIzRifIm2oudzV5l+8oRgFr9yVcwyOFT6JCioqkwldW52P1pk/
+    /SnuexC6LYqqDuHUs5NnokzzpfS6QaWfTY5P5tz4KHJfsjDIktly3mKVfY0fSPVVokdGpcUz
+    vz2hq1fqjxB6MlB/1vtk0bImfcsoxBmF7H+4E9ZN1sX/tSb0KQARAQABtCZPcGVuIFJvYm90
+    aWNzIDxpbmZvQG9zcmZvdW5kYXRpb24ub3JnPokCVAQTAQoAPhYhBMHPbjHmut6IaLFytPQu
+    1vurF8ZUBQJc7yaWAhsDBQkDwmcABQsJCAcCBhUKCQgLAgQWAgMBAh4BAheAAAoJEPQu1vur
+    F8ZUkhIP/RbZY1ErvCEUy8iLJm9aSpLQnDZl5xILOxyZlzpg+Ml5bb0EkQDr92foCgcvLeAN
+    KARNCaGLyNIWkuyDovPV0xZJrEy0kgBrDNb3++NmdI/+GA92pkedMXXioQvqdsxUagXAIB/s
+    NGByJEhs37F05AnFvZbjUhceq3xTlvAMcrBWrgB4NwBivZY6IgLvl/CRQpVYwANShIQdbvHv
+    ZSxRonWhNXr6v/Wcf8rsp7g2VqJ2N2AcWT84aa9BLQ3Oe/SgrNx4QEhA1y7rc3oaqPVu5ZXO
+    K+4O14JrpbEZ3Xs9YEjrcOuEDEpYktA8qqUDTdFyZrxb9S6BquUKrA6jZgT913kjJ4e7YAZo
+    bC4rH0w4u0PrqDgYOkXA9Mo7L601/7ZaDJob80UcK+Z12ZSw73IgBix6DiJVfXuWkk5PM2zs
+    Fn6UOQXUNlZlDAOj5NC01V0fJ8P0v6GO9YOSSQx0j5UtkUbRfp/4W7uCPFvwAatWEHJhlM3s
+    QNiMNStJFegr56xQu1a/cbJH7GdbseMhG/f0BaKQqXCI3ffB5y5AOLc9Hw7PYiTFQsuY1ePR
+    hE+J9mejgWRZxkjAH/FlAubqXkDgterCh+sLkzGf+my2IbsMCuc+3aeNMJ5Ej/vlXefCH/Mp
+    PWAHCqpQhe2DET/jRSaM53USAHNx8kw4MPUkxExgI7Sd
     =4Ofr
     -----END PGP PUBLIC KEY BLOCK-----
   urls:
-  - http://repositories.ros.org/ubuntu/testing
+  - http://10.210.9.154/ubuntu/testing
+  - http://packages.ros.org/ros/ubuntu
 targets:
   ubuntu:
     bionic:
       amd64:
 type: doc-build
 upload_credential_id: 1e7d4696-7fd4-4bc6-8c87-ebc7b6ce16e5
-upload_host: ros.osuosl.org
-upload_root: /home/rosbot/docs
-upload_user: rosbot
+upload_host: repo
+upload_root: /var/repos/docs
+upload_user: jenkins-slave
 version: 2
