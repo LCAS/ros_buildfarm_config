@@ -1,15 +1,60 @@
 %YAML 1.1
-# ROS buildfarm doc-build file
+# ROS buildfarm ci-build file
 ---
-canonical_base_url: http://docs.ros.org
-documentation_type: rosdoc_lite
-jenkins_job_priority: 91
-jenkins_job_timeout: 120
-notifications:
-  committers: false
-  emails:
-  - lcas-build-farm@googlegroups.com
-  maintainers: false
+build_tool: 'catkin_make_isolated'
+build_environment_variables:
+  ROS_PYTHON_VERSION: '2'
+jenkins_job_priority: 50
+jenkins_job_timeout: 300
+repository_names:
+  - actionlib
+  - angles
+  - bond_core
+  - catkin
+  - class_loader
+  - cmake_modules
+  - common_msgs
+  - dynamic_reconfigure
+  - eigen_stl_containers
+  - filters
+  - gencpp
+  - geneus
+  - genlisp
+  - genmsg
+  - gennodejs
+  - genpy
+  - geometry
+  - geometry2
+  - gl_dependency
+  - joint_state_publisher
+  - kdl_parser
+  - laser_geometry
+  - message_generation
+  - message_runtime
+  - nodelet_core
+  - orocos_kinematics_dynamics
+  - pluginlib
+  - python_qt_binding
+  - qt_gui_core
+  - qwt_dependency
+  - random_numbers
+  - resource_retriever
+  - robot_state_publisher
+  - ros
+  - ros_comm
+  - ros_comm_msgs
+  - ros_environment
+  - rosbag_migration_rule
+  - rosconsole
+  - rosconsole_bridge
+  - roscpp_core
+  - roslisp
+  - rospack
+  - rqt
+  - std_msgs
+  - urdf
+  - urdfdom_py
+  - webkit_dependency
 repositories:
   keys:
   - |
@@ -47,11 +92,7 @@ repositories:
   - http://repositories.ros.org/ubuntu/testing
 targets:
   ubuntu:
-    trusty:
+    bionic:
       amd64:
-type: doc-build
-upload_credential_id: 1e7d4696-7fd4-4bc6-8c87-ebc7b6ce16e5
-upload_host: repo
-upload_root: /var/repos/docs
-upload_user: jenkins-slave
-version: 2
+type: ci-build
+version: 1

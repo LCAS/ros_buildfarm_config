@@ -1,15 +1,26 @@
 %YAML 1.1
-# ROS buildfarm doc-build file
+# ROS buildfarm release-build file
 ---
-canonical_base_url: http://docs.ros.org
-documentation_type: rosdoc_lite
-jenkins_job_priority: 91
-jenkins_job_timeout: 120
+abi_incompatibility_assumed: true
+jenkins_binary_job_priority: 77
+jenkins_binary_job_timeout: 120
+jenkins_source_job_priority: 67
+jenkins_source_job_timeout: 30
 notifications:
-  committers: false
   emails:
-  - lcas-build-farm@googlegroups.com
-  maintainers: false
+  - ros-buildfarm-kinetic@googlegroups.com
+  - tfoote+buildfarm@osrfoundation.org
+  maintainers: true
+package_blacklist:
+- cartographer
+- libfranka
+- rosjava_bootstrap
+- rospilot
+- rqt_multiplot
+- schunk_canopen_driver
+- web_video_server
+sync:
+  package_count: 1800
 repositories:
   keys:
   - |
@@ -44,14 +55,12 @@ repositories:
     =4Ofr
     -----END PGP PUBLIC KEY BLOCK-----
   urls:
-  - http://repositories.ros.org/ubuntu/testing
+  - http://repositories.ros.org/ubuntu/building
+target_repository: http://repositories.ros.org/ubuntu/building
 targets:
-  ubuntu:
-    trusty:
+  debian:
+    jessie:
       amd64:
-type: doc-build
+type: release-build
 upload_credential_id: 1e7d4696-7fd4-4bc6-8c87-ebc7b6ce16e5
-upload_host: repo
-upload_root: /var/repos/docs
-upload_user: jenkins-slave
 version: 2

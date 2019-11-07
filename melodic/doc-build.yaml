@@ -1,15 +1,18 @@
 %YAML 1.1
 # ROS buildfarm doc-build file
 ---
+build_environment_variables:
+  ROS_PYTHON_VERSION: 2
 canonical_base_url: http://docs.ros.org
 documentation_type: rosdoc_lite
-jenkins_job_priority: 91
+jenkins_job_priority: 85
 jenkins_job_timeout: 120
 notifications:
   committers: false
   emails:
-  - lcas-build-farm@googlegroups.com
-  maintainers: false
+  - ros-buildfarm-melodic@googlegroups.com
+  - clalancette+buildfarm@osrfoundation.org
+  maintainers: true
 repositories:
   keys:
   - |
@@ -47,11 +50,11 @@ repositories:
   - http://repositories.ros.org/ubuntu/testing
 targets:
   ubuntu:
-    trusty:
+    bionic:
       amd64:
 type: doc-build
 upload_credential_id: 1e7d4696-7fd4-4bc6-8c87-ebc7b6ce16e5
-upload_host: repo
-upload_root: /var/repos/docs
-upload_user: jenkins-slave
+upload_host: ros.osuosl.org
+upload_root: /home/rosbot/docs
+upload_user: rosbot
 version: 2
