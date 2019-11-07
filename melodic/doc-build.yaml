@@ -1,86 +1,19 @@
 %YAML 1.1
-# ROS buildfarm index file
+# ROS buildfarm doc-build file
 ---
-distributions:
-#  indigo:
-#    doc_builds:
-#      default: indigo/doc-build.yaml
-#      released-packages-without-doc-job: indigo/doc-released-build.yaml
-#    notification_emails:
-#    - lcas-build-farm@googlegroups.com
-#    release_builds:
-#      arm: indigo/release-armhf-build.yaml
-#      default: indigo/release-build.yaml
-#    source_builds:
-#      default: indigo/source-build.yaml
-#  jade:
-#    doc_builds:
-#      default: jade/doc-build.yaml
-#      released-packages-without-doc-job: jade/doc-released-build.yaml
-#    notification_emails:
-#    - lcas-build-farm@googlegroups.com
-#    release_builds:
-#      arm: jade/release-armhf-build.yaml
-#      default: jade/release-build.yaml
-#    source_builds:
-#      default: jade/source-build.yaml
-  kinetic:
-#    doc_builds:
-#      default: kinetic/doc-build.yaml
-#      released-packages-without-doc-job: kinetic/doc-released-build.yaml
-    notification_emails:
-    - lcas-build-farm@googlegroups.com
-    release_builds:
-#      arm: kinetic/release-armhf-build.yaml
-      default: kinetic/release-build.yaml
-    source_builds:
-      default: kinetic/source-build.yaml
-#  lunar:
-#    doc_builds:
-#      default: lunar/doc-build.yaml
-#      released-packages-without-doc-job: lunar/doc-released-build.yaml
-#    notification_emails:
-#    - ros-buildfarm-lunar@googlegroups.com
-#    - clalancette+buildfarm@osrfoundation.org
-#    release_builds:
-#      default: lunar/release-build.yaml
-#      ds: lunar/release-stretch-build.yaml
-#      dsv8: lunar/release-stretch-arm64-build.yaml
-#      uxhf: lunar/release-xenial-armhf-build.yaml
-#      uxv8: lunar/release-xenial-arm64-build.yaml
-#    source_builds:
-#      default: lunar/source-build.yaml
-  melodic:
-#    doc_builds:
-#      default: melodic/doc-build.yaml
-#      released-packages-without-doc-job: melodic/doc-released-build.yaml
-    notification_emails:
-    - lcas-build-farm@googlegroups.com
-    release_builds:
-      default: melodic/release-build.yaml
-#      ds: melodic/release-stretch-build.yaml
-#      dsv8: melodic/release-stretch-arm64-build.yaml
-#      ubhf: melodic/release-armhf-build.yaml
-#      ubv8: melodic/release-arm64-build.yaml
-    source_builds:
-      default: melodic/source-build.yaml
-#      ds: melodic/source-stretch-build.yaml
-#  noetic:
-#    ci_builds:
-#      bionic-python2: noetic/ci-bionic-python2.yaml
-#      bionic-python3: noetic/ci-bionic-python3.yaml
-#    notification_emails:
-#    - lcas-build-farm@googlegroups.com
-#doc_builds:
-#  independent-packages: doc-independent-build.yaml
-jenkins_url: http://10.210.9.151:8080/buildfarm/
-notification_emails:
-- lcas-build-farm@googlegroups.com
-prerequisites:
-  debian_repositories:
-  - http://10.210.9.154/ubuntu/building
-  - http://packages.ros.org/ros/ubuntu
-  debian_repository_keys:
+build_environment_variables:
+  ROS_PYTHON_VERSION: 2
+canonical_base_url: http://docs.ros.org
+documentation_type: rosdoc_lite
+jenkins_job_priority: 85
+jenkins_job_timeout: 120
+notifications:
+  committers: false
+  emails:
+  - lcas-build-farm@googlegroups.com
+  maintainers: false
+repositories:
+  keys:
   - |
     -----BEGIN PGP PUBLIC KEY BLOCK-----
     Version: GnuPG v1.4.11 (GNU/Linux)
@@ -116,7 +49,7 @@ prerequisites:
     -----BEGIN PGP PUBLIC KEY BLOCK-----
     Version: SKS 1.1.6
     Comment: Hostname: keyserver.ubuntu.com
-
+    
     mQINBFzvJpYBEADY8l1YvO7iYW5gUESyzsTGnMvVUmlV3XarBaJz9bGRmgPXh7jcVFrQhE0L
     /HV7LOfoLI9H2GWYyHBqN5ERBlcA8XxG3ZvX7t9nAZPQT2Xxe3GT3trou5oCR+SyHN9xPnUw
     DuqUSvJ2eqMYb9B/Hph3OmtjG30jSNq9kOF5bBTk1hOTGPH4K/AY0jzT6OpHfXU6ytlFsI47
@@ -141,15 +74,16 @@ prerequisites:
     PWAHCqpQhe2DET/jRSaM53USAHNx8kw4MPUkxExgI7Sd
     =4Ofr
     -----END PGP PUBLIC KEY BLOCK-----
-#git_ssh_credential_id: iliad_user
-git_credentials:
-  "https://github.com/.*": global_github_strands_jenkins
-  "https://gitsvn-nt.oru.se/.*": iliad_user
-rosdistro_index_url: https://raw.githubusercontent.com/LCAS/rosdistro/master/index.yaml
-status_page_repositories:
-  default:
-  - http://10.210.9.154/ubuntu/building
+  urls:
   - http://10.210.9.154/ubuntu/testing
-  - http://10.210.9.154/ubuntu/main
-type: buildfarm
-version: 1
+  - http://packages.ros.org/ros/ubuntu
+targets:
+  ubuntu:
+    bionic:
+      amd64:
+type: doc-build
+upload_credential_id: 1e7d4696-7fd4-4bc6-8c87-ebc7b6ce16e5
+upload_host: repo
+upload_root: /var/repos/docs
+upload_user: jenkins-slave
+version: 2
