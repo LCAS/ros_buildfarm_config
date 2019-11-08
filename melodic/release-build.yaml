@@ -11,7 +11,7 @@ notifications:
   - lcas-build-farm@googlegroups.com
   maintainers: true
 sync:
-  package_count: 1000
+  package_count: 1
 repositories:
   keys:
   - |
