@@ -150,6 +150,7 @@ status_page_repositories:
   default:
   - http://10.210.9.154/ubuntu/building
   - http://10.210.9.154/ubuntu/testing
+  - http://10.210.9.154/ubuntu/restricted
   - http://10.210.9.154/ubuntu/main
 type: buildfarm
 version: 1
