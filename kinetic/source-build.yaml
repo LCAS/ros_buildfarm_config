@@ -83,7 +83,8 @@ targets:
     xenial:
       amd64:
 test_commits:
-  default: true
+  default: false
+  force: true
 test_pull_requests:
   default: false
   force: true
